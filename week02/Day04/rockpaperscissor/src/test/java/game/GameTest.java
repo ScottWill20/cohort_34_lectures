@@ -22,4 +22,6 @@ class GameTest {
         assertEquals(String.format("The computer picked %s and you picked %s - You Lose 😭", ROCK, SCISSORS),result);
     }
 
+    // etc.....
+
 }

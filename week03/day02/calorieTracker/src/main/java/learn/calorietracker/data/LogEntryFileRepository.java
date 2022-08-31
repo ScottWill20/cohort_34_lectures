@@ -19,7 +19,6 @@ public class LogEntryFileRepository implements LogEntryRepository {
     }
 
     // METHODS
-    // HELPER METHODS
     private LogEntry lineToLogEntry(String line) {
         String[] fields = line.split(DELIMITER);
 
@@ -37,6 +36,93 @@ public class LogEntryFileRepository implements LogEntryRepository {
         return logEntry;
 
     }
+
+    @Override
+    public List<LogEntry> findAll() throws DataAccessException {
+        // creating a list of log entries
+        List<LogEntry> result = new ArrayList<>();
+        // try with resources our buffered reader
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            // skip the header line
+            reader.readLine();
+
+            // loop through our file and read each entry
+            for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+                LogEntry logEntry = lineToLogEntry(line);
+                result.add(logEntry);
+            }
+
+        } catch (FileNotFoundException ex) {
+            // swallow this exception
+            // it's ok if the file doesn't exist yet - it will get created later
+        } catch (IOException ex) {
+            throw new DataAccessException("Could not open File Path:" + filePath, ex);
+        }
+        return result;
+    }
+
+    @Override
+    public LogEntry findById(int logEntryId) throws DataAccessException {
+        List<LogEntry> all = findAll();
+        for (LogEntry logEntry: all) {
+            if (logEntry.getId() == logEntryId) {
+                return logEntry;
+            }
+        }
+        return null;
+    }
+
+    // CREATE
+
+    @Override
+    public LogEntry create(LogEntry logEntry) throws DataAccessException {
+        List<LogEntry> all = findAll();
+        int nextId = getNextId(all); // automatically generate the next ID for us
+        logEntry.setId(nextId); // set the ID to the next ID
+        all.add(logEntry); // add entry to list of entries
+        writeToFile(all); // update the file
+        return logEntry;
+    }
+
+    // UPDATE
+
+    @Override
+    public boolean update(LogEntry logEntry) throws DataAccessException {
+        List<LogEntry> all = findAll();
+        // loop through all the entries
+        for (int i = 0; i < all.size(); i++) {
+            // if the current index id matches the logEntry id
+            if (all.get(i).getId() == logEntry.getId()) {
+                // update that index with the log entry provided
+                all.set(i, logEntry);
+                //then i want to rewrite that entire array to the file
+                writeToFile(all);
+                // I want to return true so we know this was successful
+                return true;
+            }
+        }
+        // if I've looped through everything and was not able to update anything, I am going
+            // to return false because this update was not successful
+        return false;
+
+    }
+
+    // DELETE
+
+    @Override
+    public boolean deleteById(int logEntryId) throws DataAccessException {
+        List<LogEntry> all = findAll();
+        for (int i = 0; i < all.size(); i++) {
+            if (all.get(i).getId() == logEntryId) {
+                all.remove(i);
+                writeToFile(all);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // HELPER METHODS
 
     // Replace comma with @@@ if it exists where user typed text
     private String restore(String value) {
@@ -91,65 +177,5 @@ public class LogEntryFileRepository implements LogEntryRepository {
 
     // READ
 
-    @Override
-    public List<LogEntry> findAll() throws DataAccessException {
-        // creating a list of log entries
-        List<LogEntry> result = new ArrayList<>();
-        // try with resources our buffered reader
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
-            // skip the header line
-            reader.readLine();
-
-            // loop through our file and read each entry
-            for (String line = reader.readLine(); line != null; line = reader.readLine()) {
-                LogEntry logEntry = lineToLogEntry(line);
-                result.add(logEntry);
-            }
-
-        } catch (FileNotFoundException ex) {
-            // swallow this exception
-            // it's ok if the file doesn't exist yet - it will get created later
-        } catch (IOException ex) {
-            throw new DataAccessException("Could not open File Path:" + filePath, ex);
-        }
-        return result;
-    }
-
-    @Override
-    public LogEntry findById(int logEntryId) throws DataAccessException {
-        List<LogEntry> all = findAll();
-        for (LogEntry logEntry: all) {
-            if (logEntry.getId() == logEntryId) {
-                return logEntry;
-            }
-        }
-        return null;
-    }
-
-    // CREATE
-
-    @Override
-    public LogEntry create(LogEntry logEntry) throws DataAccessException {
-        List<LogEntry> all = findAll();
-        int nextId = getNextId(all); // automatically generate the next ID for us
-        logEntry.setId(nextId); // set the ID to the next ID
-        all.add(logEntry); // add entry to list of entries
-        writeToFile(all); // update the file
-        return logEntry;
-    }
-
-    // UPDATE
-
-    @Override
-    public boolean update(LogEntry logEntry) {
-        return false;
-    }
-
-    // DELETE
-
-    @Override
-    public boolean delete(int logEntryId) {
-        return false;
-    }
 
 }

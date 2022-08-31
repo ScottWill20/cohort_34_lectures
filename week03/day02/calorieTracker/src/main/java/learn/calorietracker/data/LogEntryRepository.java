@@ -12,8 +12,8 @@ public interface LogEntryRepository {
     // Create
     LogEntry create(LogEntry logEntry) throws DataAccessException;
     // Update
-    boolean update(LogEntry logEntry);
+    boolean update(LogEntry logEntry) throws DataAccessException;
     // Delete
-    boolean delete(int logEntryId);
+    boolean deleteById(int logEntryId) throws DataAccessException;
 
 }

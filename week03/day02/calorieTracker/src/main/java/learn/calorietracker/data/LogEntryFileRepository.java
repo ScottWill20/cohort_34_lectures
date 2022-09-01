@@ -127,12 +127,12 @@ public class LogEntryFileRepository implements LogEntryRepository {
     // Replace comma with @@@ if it exists where user typed text
     private String restore(String value) {
         // first argument is the thing we are checking for, second is the thing we want to replace it with
-        return value.replace(DELIMITER,DELIMITER_REPLACEMENT);
+        return value.replace(DELIMITER_REPLACEMENT, DELIMITER);
     }
 
     // to clean up the data afterwards
     private String clean(String value) {
-        return value.replace(DELIMITER_REPLACEMENT,DELIMITER);
+        return value.replace(DELIMITER, DELIMITER_REPLACEMENT);
     }
 
     // write to file

@@ -10,7 +10,7 @@ public class LogEntryRepositoryDouble implements LogEntryRepository{
     @Override
    public List<LogEntry> findAll() throws DataAccessException {
         ArrayList<LogEntry> all = new ArrayList<>();
-        all.add(new LogEntry(1, "2022-01-01 9:00 AM", LogEntryType.BREAKFAST, "French Toast", 500));
+        all.add(new LogEntry(1, "2022-01-01 9:00 AM", LogEntryType.BREAKFAST, "Fremch Toast", 0500));
         all.add(new LogEntry(2, "2022-03-07 6:00 PM", LogEntryType.DINNER, "Spaghetti and Meatballs", 700));
         all.add(new LogEntry(3, "2022-01-01 11:00 AM", LogEntryType.SNACK, "Carrots", 100));
 
@@ -41,6 +41,6 @@ public class LogEntryRepositoryDouble implements LogEntryRepository{
 
     @Override
     public boolean deleteById(int logEntryId) throws DataAccessException {
-        return logEntryId != 999;
+        return logEntryId != 99;
     }
 }

@@ -1,7 +1,7 @@
 package learn.calorietracker.models;
 
 public enum LogEntryType {
-    BREAKFAST("Breakfast"),
+    BREAKFAST("Bfast"),
     LUNCH("Lunch"),
     DINNER("Dinner"),
     SNACK("Snack");

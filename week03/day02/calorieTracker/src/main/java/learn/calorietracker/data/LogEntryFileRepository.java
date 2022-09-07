@@ -2,19 +2,26 @@ package learn.calorietracker.data;
 
 import learn.calorietracker.models.LogEntry;
 import learn.calorietracker.models.LogEntryType;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.print.attribute.standard.PresentationDirection;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class LogEntryFileRepository implements LogEntryRepository {
     // fields
     private static final String DELIMITER = ",";
     private final String DELIMITER_REPLACEMENT = "@@@";
     private final String filePath;
 
-    public LogEntryFileRepository(String filePath){
+// For @Value:
+// fallback value = if nothing is configured, use the value after the :
+    public LogEntryFileRepository(@Value("${logEntryFilePath:./data/log-entries.csv}")String filePath){
+
         this.filePath = filePath;
     }
 

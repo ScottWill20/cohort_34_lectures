@@ -3,13 +3,16 @@ package learn.calorietracker.domain;
 import learn.calorietracker.data.DataAccessException;
 import learn.calorietracker.data.LogEntryRepository;
 import learn.calorietracker.models.LogEntry;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class LogEntryService {
     private final LogEntryRepository repository;
 
     public LogEntryService(LogEntryRepository repository) {
+
         this.repository = repository;
     }
 

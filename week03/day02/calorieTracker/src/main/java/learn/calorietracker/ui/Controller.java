@@ -8,9 +8,11 @@ import learn.calorietracker.data.DataAccessException;
 import learn.calorietracker.domain.LogEntryResult;
 import learn.calorietracker.domain.LogEntryService;
 import learn.calorietracker.models.LogEntry;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class Controller {
     // I'm moderating between the model view and the service from the domain, so I need a view and a service
 

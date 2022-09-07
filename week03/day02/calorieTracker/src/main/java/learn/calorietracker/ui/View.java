@@ -6,10 +6,12 @@ package learn.calorietracker.ui;
 
 import learn.calorietracker.models.LogEntry;
 import learn.calorietracker.models.LogEntryType;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class View {
     // we know the view will communicate with user, so we want a scanner in this class
     Scanner console = new Scanner(System.in);

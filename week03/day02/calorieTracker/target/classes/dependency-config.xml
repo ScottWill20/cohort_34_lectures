@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!-- adding ids so that I can reference in my constructor args -->
+        <bean id = "repository" class = "learn.calorietracker.data.LogEntryFileRepository">
+                <constructor-arg value = "./data/log-entries.csv"/>
+                <!-- here I am using value instead of ref to reference a string instead of a file -->
+        </bean>
+        <bean id = "view" class = "learn.calorietracker.ui.View">
+
+        </bean>
+        <bean id = "service" class = "learn.calorietracker.domain.LogEntryService">
+                <constructor-arg ref = "repository"/>
+        </bean>
+
+        <bean class = "learn.calorietracker.ui.Controller">
+                <!-- addimg my constructor args here -->
+                <constructor-arg ref = "view"/>
+                <constructor-arg ref = "service"/>
+        </bean>
+
+
+</beans>

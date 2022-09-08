@@ -1,7 +1,11 @@
 import data.Repository;
 import models.Entry;
 
+import java.time.YearMonth;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public class App {
     public static void main(String[] args) {
@@ -19,11 +23,30 @@ public class App {
         2) Use the Stream API to answer the same questions.
          */
 
-        Repository repository = new Repository("./data/google-trends-data.csv");
-
-        List<Entry> entries = repository.getEntries();
-
-
+        displayRankingsFor2010();
+        displayHighestRankingMonthYear();
 
     }
+
+    public static void displayRankingsFor2010() {
+        Stream <Entry> entryStream = getScore().stream();
+        Stream <Entry> rankingsTwentyTen = entryStream.filter(e -> e.getYearMonth().getYear() == 2010);
+        rankingsTwentyTen.forEach(System.out::println);
+    }
+
+    public static void displayHighestRankingMonthYear() {
+        Stream <Entry> entryStream = getScore().stream();
+        Stream <Entry> highestRanking = entryStream.sorted(Comparator.comparing(Entry::getScore).reversed()).limit(1);
+        highestRanking.forEach(System.out::println);
+    }
+
+    static List<Entry> getScore() {
+        Repository scoreRepo = new Repository("./data/google-trends-data.csv");
+        //NameRepository nameRepo = new NameRepository("characters.csv");
+        //PlayerService service = new PlayerService(playerRepo, nameRepo);
+        return scoreRepo.getEntries();
+    }
+
+
+
 }

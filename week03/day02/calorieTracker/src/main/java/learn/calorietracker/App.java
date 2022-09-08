@@ -18,7 +18,7 @@ import java.util.List;
 @PropertySource("classpath:data.properties") // this will tell the app where to look
 public class App {
     public static void main(String[] args) {
-        configureManuallyAndRun();
+        configureWithXMLandRun();
     }
 
     // With annotations

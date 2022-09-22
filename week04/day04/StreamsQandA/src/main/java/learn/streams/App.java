@@ -41,9 +41,9 @@ public class App {
 
         // declarative solution - just the what
 
-//        people.stream()
-//                .filter(p -> p.getLastName().toLowerCase().charAt(0) == 'a')
-//                .forEach(System.out::println);
+        people.stream()
+                .filter(p -> p.getLastName().toLowerCase().charAt(0) == 'a')
+                .forEach(System.out::println);
 
 //     // TODO filter those who live in california
 //        // stream within a stream
@@ -57,15 +57,15 @@ public class App {
         // SORTING
 
         // returns a String
-//        List<String> sortedPeopleName = people.stream()
-//                // this is going to work because we are mapping Person to String and String implements comparable
-//                .map(p -> String.format("%s %s",p.getLastName(),p.getFirstName()))
-//                .sorted()
-//                .collect(Collectors.toList());
-//
-//        for (String personName : sortedPeopleName) {
-//            System.out.println(personName);
-//        }
+        List<String> sortedPeopleName = people.stream()
+                // this is going to work because we are mapping Person to String and String implements comparable
+                .map(p -> String.format("%s %s",p.getLastName(),p.getFirstName()))
+                .sorted()
+                .collect(Collectors.toList());
+
+        for (String personName : sortedPeopleName) {
+            System.out.println(personName);
+        }
 //
 //        // map calls comparable so if we don't do a map, how can we do this?
 //        // returns the whole object
@@ -89,30 +89,30 @@ public class App {
         // we take all records nd organize them into groups
 
 
-//        Map<Character, List<Person>> groupedPeople = people.stream()
-//                .collect(Collectors.groupingBy(person -> person.getLastName().toUpperCase().charAt(0)));
-//        // this returns a HashMap
-//        // putting our stream inside a list, so we can loop through our hashmap and view our results
-//        for (Character key : groupedPeople.keySet()) {
-//            System.out.println("All of the people whose last name starts with: " + key + "...");
-//            for (Person person : groupedPeople.get(key)) {
-//                System.out.println(person);
-//            }
-//        }
+        Map<Character, List<Person>> groupedPeople = people.stream()
+                .collect(Collectors.groupingBy(person -> person.getLastName().toUpperCase().charAt(0)));
+        // this returns a HashMap
+        // putting our stream inside a list, so we can loop through our hashmap and view our results
+        for (Character key : groupedPeople.keySet()) {
+            System.out.println("All of the people whose last name starts with: " + key + "...");
+            for (Person person : groupedPeople.get(key)) {
+                System.out.println(person);
+            }
+        }
 
         // TODO get the average age here as well - so we can supply a second optional here
         // IntSummaryStatistics - check Oracle
-//        Map<Character, IntSummaryStatistics> groupPeople = people.stream()
-//                .collect(Collectors.groupingBy(
-//                        person -> person.getLastName().toUpperCase().charAt(0),
-//                        Collectors.summarizingInt(
-//                                person -> LocalDate.now().getYear() - person.getBirthDate().getYear())));
-//
-//        for (Character key : groupPeople.keySet()) {
-//            System.out.println("The average age of people whose last name starts with: " + key + "...");
-//            IntSummaryStatistics agesSummary = groupPeople.get(key); // get all of the ages within the group of last name
-//            System.out.println(agesSummary.getAverage());
-//        }
+        Map<Character, IntSummaryStatistics> groupPeople = people.stream()
+                .collect(Collectors.groupingBy(
+                        person -> person.getLastName().toUpperCase().charAt(0),
+                        Collectors.summarizingInt(
+                                person -> LocalDate.now().getYear() - person.getBirthDate().getYear())));
+
+        for (Character key : groupPeople.keySet()) {
+            System.out.println("The average age of people whose last name starts with: " + key + "...");
+            IntSummaryStatistics agesSummary = groupPeople.get(key); // get all of the ages within the group of last name
+            System.out.println(agesSummary.getAverage());
+        }
 
         // FLAT MAP - we are collapsing values into a new List
         List<StateProvince> stateProvinces = people.stream()

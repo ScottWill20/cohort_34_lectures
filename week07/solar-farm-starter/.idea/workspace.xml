@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4ab5291a-b68f-465b-81b7-9e725685ddcf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/all_reservations.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/dml-queries.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/dwmh_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/dwmh_dml.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_dml_initial.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_model.mwb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2FMAwUfVFTY8o4ZEjl2wLEe4gjk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/scott/cohort_34_curriculum/week-07/exercises/schema_jdbctemplate_exercise/solar-farm-starter"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ab5291a-b68f-465b-81b7-9e725685ddcf" name="Changes" comment="" />
+      <created>1664291818082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664291818082</updated>
+    </task>
+    <servers />
+  </component>
+</project>

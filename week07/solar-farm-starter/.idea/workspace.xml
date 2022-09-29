@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ab5291a-b68f-465b-81b7-9e725685ddcf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/all_reservations.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/dml-queries.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/dwmh_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_database/dwmh_dml.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_ddl.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_dml_initial.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week06/day04/dwmh_model.mwb" afterDir="false" />
-    </list>
+    <list default="true" id="4ab5291a-b68f-465b-81b7-9e725685ddcf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +32,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/scott/cohort_34_curriculum/week-07/exercises/schema_jdbctemplate_exercise/solar-farm-starter"
+    "last_opened_file_path": "C:/Users/scott/cohort_34_lectures/week07/solar-farm-starter"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

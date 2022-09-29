@@ -1,2 +1,10 @@
-package learn.mvcgame.controllers;public class GameController {
+package learn.mvcgame.controllers;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class GameController {
+
+
+
 }

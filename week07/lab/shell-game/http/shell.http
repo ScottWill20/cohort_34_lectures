@@ -1,0 +1,13 @@
+POST http://localhost:8080/start HTTP/1.1
+
+###
+POST http://localhost:8080/replay HTTP/1.1
+
+###
+PUT http://localhost:8080/1 HTTP/1.1
+
+###
+PUT http://localhost:8080/2 HTTP/1.1
+
+###
+PUT http://localhost:8080/3 HTTP/1.1

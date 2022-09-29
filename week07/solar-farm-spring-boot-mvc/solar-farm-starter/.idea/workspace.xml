@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00e55de6-f0f5-4818-94e9-4e61f9734f91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/ResultType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/production.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/production.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/queries.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/requests.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/learn/solarfarm/data/DbTestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/learn/solarfarm/domain/SolarPanelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/solarfarm/domain/SolarPanelServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -60,13 +62,113 @@
       <recent name="C:\Users\scott\cohort_34_lectures\week07\solar-farm-spring-boot-mvc\solar-farm-starter" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SolarPanelServiceTest">
     <configuration default="true" type="Application" factoryName="Application">
       <envs>
         <env name="DB_USERNAME" value="root" />
         <env name="DB_PASSWORD" value="top-secret-password" />
       </envs>
       <module name="solar-farm-starter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolarPanelServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="solar-farm-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.solarfarm.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.solarfarm.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.solarfarm.domain.SolarPanelServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="top-secret-password" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolarPanelServiceTest.shouldFindTwoSolarPanelsForSectionOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="solar-farm-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.solarfarm.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.solarfarm.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.solarfarm.domain.SolarPanelServiceTest" />
+      <option name="METHOD_NAME" value="shouldFindTwoSolarPanelsForSectionOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="top-secret-password" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolarPanelServiceTest.shouldNotCreateNonUniqueSectionRowColumn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="solar-farm-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.solarfarm.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.solarfarm.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.solarfarm.domain.SolarPanelServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotCreateNonUniqueSectionRowColumn" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="top-secret-password" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolarPanelServiceTest.shouldNotUpdateEmptySection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="solar-farm-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.solarfarm.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.solarfarm.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.solarfarm.domain.SolarPanelServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotUpdateEmptySection" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="top-secret-password" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolarPanelServiceTest.shouldUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="solar-farm-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.solarfarm.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.solarfarm.domain" />
+      <option name="MAIN_CLASS_NAME" value="learn.solarfarm.domain.SolarPanelServiceTest" />
+      <option name="METHOD_NAME" value="shouldUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="top-secret-password" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,6 +185,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SolarPanelServiceTest" />
+        <item itemvalue="JUnit.SolarPanelServiceTest.shouldNotCreateNonUniqueSectionRowColumn" />
+        <item itemvalue="JUnit.SolarPanelServiceTest.shouldNotUpdateEmptySection" />
+        <item itemvalue="JUnit.SolarPanelServiceTest.shouldUpdate" />
+        <item itemvalue="JUnit.SolarPanelServiceTest.shouldFindTwoSolarPanelsForSectionOne" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -9,21 +9,29 @@ public class SolarPanelResult {
     private final ArrayList<String> messages = new ArrayList<>();
     private SolarPanel solarPanel;
 
+    private ResultType resultType = ResultType.SUCCESS; // setting it to success by default - otherwise it would be null
+
     public List<String> getErrorMessages() {
         return new ArrayList<>(messages);
     }
 
-    public void addErrorMessage(String message) {
+    public void addErrorMessage(String message, ResultType resultType) {
         messages.add(message);
+        this.resultType = resultType;
     }
 
-    public void addErrorMessage(String format, Object... args) {
+    public void addErrorMessage(String format,ResultType resultType, Object... args) {
         messages.add(String.format(format, args));
+        this.resultType = resultType;
     }
 
     public boolean isSuccess() {
         // If an error message exists, the operation failed.
-        return messages.size() == 0;
+        return resultType == ResultType.SUCCESS;
+    }
+
+    public ResultType getResultType() {
+        return this.resultType;
     }
 
     public SolarPanel getSolarPanel() {

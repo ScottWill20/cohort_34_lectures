@@ -37,7 +37,7 @@ public class SolarPanelService {
         SolarPanelResult result = validate(solarPanel);
 
         if (solarPanel != null && solarPanel.getId() > 0) {
-            result.addErrorMessage("SolarPanel `id` should not be set.");
+            result.addErrorMessage("SolarPanel `id` should not be set.", ResultType.INVALID);
         }
 
         if (result.isSuccess()) {
@@ -52,14 +52,15 @@ public class SolarPanelService {
         SolarPanelResult result = validate(solarPanel);
 
         if (solarPanel.getId() <= 0) {
-            result.addErrorMessage("SolarPanel `id` is required.");
+            // updating this for MVC
+            result.addErrorMessage("SolarPanel `id` is required.", ResultType.INVALID);
         }
 
         if (result.isSuccess()) {
             if (repository.update(solarPanel)) {
                 result.setSolarPanel(solarPanel);
             } else {
-                result.addErrorMessage("SolarPanel id %s was not found.", solarPanel.getId());
+                result.addErrorMessage("SolarPanel id %s was not found.", ResultType.NOT_FOUND, solarPanel.getId());
             }
         }
         return result;
@@ -68,7 +69,7 @@ public class SolarPanelService {
     public SolarPanelResult deleteById(int id) throws DataAccessException {
         SolarPanelResult result = new SolarPanelResult();
         if (!repository.deleteById(id)) {
-            result.addErrorMessage("SolarPanel id %s was not found.", id);
+            result.addErrorMessage("SolarPanel id %s was not found.",ResultType.NOT_FOUND,id);
         }
         return result;
     }
@@ -77,28 +78,28 @@ public class SolarPanelService {
         SolarPanelResult result = new SolarPanelResult();
 
         if (solarPanel == null) {
-            result.addErrorMessage("SolarPanel cannot be null.");
+            result.addErrorMessage("SolarPanel cannot be null.", ResultType.INVALID);
             return result;
         }
 
         if (solarPanel.getSection() == null || solarPanel.getSection().isBlank()) {
-            result.addErrorMessage("SolarPanel `section` is required.");
+            result.addErrorMessage("SolarPanel `section` is required.", ResultType.INVALID);
         }
 
         if (solarPanel.getRow() < 1 || solarPanel.getRow() >= MAX_ROW_COLUMN) {
-            result.addErrorMessage("SolarPanel `row` must be a positive number less than or equal to %s.", MAX_ROW_COLUMN);
+            result.addErrorMessage("SolarPanel `row` must be a positive number less than or equal to %s.",ResultType.INVALID, MAX_ROW_COLUMN);
         }
 
         if (solarPanel.getColumn() < 1 || solarPanel.getColumn() >= MAX_ROW_COLUMN) {
-            result.addErrorMessage("SolarPanel `column` must be a positive number less than or equal to %s.", MAX_ROW_COLUMN);
+            result.addErrorMessage("SolarPanel `column` must be a positive number less than or equal to %s.",ResultType.INVALID, MAX_ROW_COLUMN);
         }
 
         if (solarPanel.getYearInstalled() > getMaxInstallationYear()) {
-            result.addErrorMessage("SolarPanel `yearInstalled` must be in the past.");
+            result.addErrorMessage("SolarPanel `yearInstalled` must be in the past.", ResultType.INVALID);
         }
 
         if (solarPanel.getMaterial() == null) {
-            result.addErrorMessage("SolarPanel `material` is required.");
+            result.addErrorMessage("SolarPanel `material` is required.", ResultType.INVALID);
         }
 
         // If everything is successful so far, then check if the combined values
@@ -113,7 +114,7 @@ public class SolarPanelService {
                         existingSolarPanel.getSection().equalsIgnoreCase(solarPanel.getSection()) &&
                         existingSolarPanel.getRow() == solarPanel.getRow() &&
                         existingSolarPanel.getColumn() == solarPanel.getColumn()) {
-                    result.addErrorMessage("SolarPanel `section`, `row`, and `column` must be unique.");
+                    result.addErrorMessage("SolarPanel `section`, `row`, and `column` must be unique.", ResultType.INVALID);
                 }
             }
         }

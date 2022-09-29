@@ -21,6 +21,10 @@ public class SolarPanelService {
         return Year.now().getValue();
     }
 
+    public List<SolarPanel> findAll() throws DataAccessException {
+        return repository.findAll();
+    }
+
     public List<SolarPanel> findBySection(String section) throws DataAccessException {
         return repository.findBySection(section);
     }

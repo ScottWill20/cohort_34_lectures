@@ -82,7 +82,8 @@ public class SolarPanelJdbcRepositoryTemplate implements SolarPanelRepository{
                 "from solar_panel " +
                 "where id = ?";
 
-        return jdbcTemplate.queryForObject(sql, mapper, id);
+        // find by id update
+        return jdbcTemplate.query(sql, mapper, id).stream().findFirst().orElse(null);
     }
 
     @Override

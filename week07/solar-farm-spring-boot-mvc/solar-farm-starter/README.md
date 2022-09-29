@@ -69,16 +69,16 @@ _Use the same project from the one-table schema and JdbcTemplate repository exer
   * Stub out the RestController (just add the class) 
   * Add a `requests.http` file (empty file) 
 
-* [ ] Show how to use environment variables to set the `DataSource` `application.properties` property values
-  * remove all configurations Run -> Edit Configurations...
+* [X] Show how to use environment variables to set the `DataSource` `application.properties` property values
+  * remove all configurations, localize password: Run -> Edit Configurations...
   
-* [ ] Implement retrieving records ("find all" and "find by section")
+* [X] Implement retrieving records ("find all" and "find by section")
   * Add the GET endpoint method
   * Write HTTP requests for manual testing
   * Test using REST Client in VS Code
   * Review data in the database using Workbench
   
-* [ ] Implement retrieving a single record
+* [X] Implement retrieving a single record
   * Add the GET endpoint method (200 OK for success, 404 NOT FOUND for failures)
   * Write an HTTP request for manual testing
   * Test using REST Client in VS Code

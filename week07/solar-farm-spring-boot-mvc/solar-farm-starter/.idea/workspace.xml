@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00e55de6-f0f5-4818-94e9-4e61f9734f91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/http/requests.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../solar-farm-starter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../solar-farm-starter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/production.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/production.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/queries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

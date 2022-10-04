@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00e55de6-f0f5-4818-94e9-4e61f9734f91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/ResultType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/controllers/SolarPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/solarfarm/domain/SolarPanelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/solarfarm/data/DbTestConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/solarfarm/data/SolarPanelJdbcRepositoryTemplateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/solarfarm/domain/SolarPanelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/solarfarm/domain/SolarPanelServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +42,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/scott/cohort_34_lectures/week07/solar-farm-spring-boot-mvc/solar-farm-starter",
+    "last_opened_file_path": "C:/Users/scott/cohort_34_curriculum/week-07/assessment/field-agent",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
